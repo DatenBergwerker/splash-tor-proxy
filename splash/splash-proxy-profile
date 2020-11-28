@@ -1,0 +1,8 @@
+[proxy]
+
+; required
+host= localhost
+port=9050
+
+; optional, default is HTTP. Allowed values are HTTP and SOCKS5
+type=SOCKS5

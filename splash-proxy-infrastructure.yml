@@ -1,0 +1,31 @@
+version: "3.8"
+
+services:
+  tor-proxy:
+    build:
+      context: ./
+      dockerfile: tor-proxy
+      labels:
+        - "tor-proxy"
+    container_name: "tor-proxy-relay"
+    ports:
+      - "9050:9050"
+#    networks:
+#      - outbound-proxy
+
+  splash:
+    image: scrapinghub/splash
+    ports:
+      - "8050:8050"
+    container_name: "splash_renderer"
+    volumes:
+       - ./splash:/etc/splash/proxy-profiles
+#    networks:
+#       - outbound-proxy
+
+#volumes:
+#  splash-proxy-profiles:
+#  - ./splash
+
+#networks:
+#  outbound-proxy:
