@@ -20,8 +20,6 @@ services:
     container_name: "splash_renderer"
     volumes:
        - ./splash:/etc/splash/proxy-profiles
-#    networks:
-#       - outbound-proxy
 
 #volumes:
 #  splash-proxy-profiles:
