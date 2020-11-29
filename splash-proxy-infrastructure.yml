@@ -9,14 +9,14 @@ services:
         - "tor-proxy"
     container_name: "tor-proxy-relay"
     ports:
-      - "9050:9050"
+      - "127.0.0.1:9050:9050"
 #    networks:
 #      - outbound-proxy
 
   splash:
     image: scrapinghub/splash
     ports:
-      - "8050:8050"
+      - "127.0.0.1:8050:8050"
     container_name: "splash_renderer"
     volumes:
        - ./splash:/etc/splash/proxy-profiles
