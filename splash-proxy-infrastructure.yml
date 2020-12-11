@@ -10,6 +10,8 @@ services:
     container_name: "tor-proxy-relay"
     networks:
       - outbound-proxy
+    volumes:
+      - ${PWD}/tor/resolv.conf:/etc/resolv.conf
 
   splash:
     image: scrapinghub/splash
