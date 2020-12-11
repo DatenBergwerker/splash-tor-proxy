@@ -1,6 +1,6 @@
 # set alpine as the base image of the Dockerfile
 FROM alpine:latest
-
+EXPOSE 9050
 # update the package repository and install Tor
 RUN apk update && apk add tor
 
